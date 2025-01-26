@@ -313,7 +313,7 @@ join_events:
   - "[MESSAGE] &8&m+---------------***---------------+"
   - "[TITLE] &b&lWELCOME;&f%player%;1;2;1"
   - "[SOUND] entity.player.levelup"
-  - "[GAMEMODE] survival"
+  - "[GAMEMODE] adventure"
   - "[EFFECT] SPEED;1"
 
 join_settings:

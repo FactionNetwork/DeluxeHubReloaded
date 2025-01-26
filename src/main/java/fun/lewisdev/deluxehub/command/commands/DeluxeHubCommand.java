@@ -63,15 +63,9 @@ public class DeluxeHubCommand {
 			sender.sendMessage(TextUtil.color(" &d/deluxehub open <menu> &8- &7&oOpen a custom menu"));
 			sender.sendMessage(TextUtil.color(" &d/deluxehub hologram &8- &7&oView the hologram help"));
 			sender.sendMessage("");
-			sender.sendMessage(TextUtil.color("  &d/vanish &8- &7&oToggle vanish mode"));
 			sender.sendMessage(TextUtil.color("  &d/fly &8- &7&oToggle flight mode"));
 			sender.sendMessage(TextUtil.color("  &d/setlobby &8- &7&oSet the spawn location"));
 			sender.sendMessage(TextUtil.color("  &d/lobby &8- &7&oTeleport to the spawn location"));
-			sender.sendMessage(TextUtil.color("  &d/gamemode <gamemode> &8- &7&oSet your gamemode"));
-			sender.sendMessage(TextUtil.color("  &d/gmc &8- &7&oGo into creative mode"));
-			sender.sendMessage(TextUtil.color("  &d/gms &8- &7&oGo into survival mode"));
-			sender.sendMessage(TextUtil.color("  &d/gma &8- &7&oGo into adventure mode"));
-			sender.sendMessage(TextUtil.color("  &d/gmsp &8- &7&oGo into spectator mode"));
 			sender.sendMessage(TextUtil.color("  &d/clearchat &8- &7&oClear global chat"));
 			sender.sendMessage(TextUtil.color("  &d/lockchat &8- &7&oLock/unlock global chat"));
 			sender.sendMessage(TextUtil.color("  &d/build &8- &7&oToggle build mode"));

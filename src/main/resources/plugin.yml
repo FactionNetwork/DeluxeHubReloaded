@@ -25,14 +25,11 @@ permissions:
       deluxehub.command.scoreboard: true
       deluxehub.command.openmenu: true
       deluxehub.command.holograms: true
-      deluxehub.command.gamemode: true
-      deluxehub.command.gamemode.others: true
       deluxehub.command.clearchat: true
       deluxehub.command.lockchat: true
       deluxehub.command.fly: true
       deluxehub.command.fly.others: true
       deluxehub.command.setlobby: true
-      deluxehub.command.vanish: true
   deluxehub.bypass.*:
     description: Gives access to all bypass permissions
     children:

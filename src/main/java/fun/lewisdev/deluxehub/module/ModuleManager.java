@@ -57,7 +57,6 @@ public class ModuleManager {
 		registerModule(new HotbarManager(plugin));
 		registerModule(new WorldProtect(plugin));
 		registerModule(new LobbySpawn(plugin));
-		registerModule(new PlayerVanish(plugin));
 		registerModule(new HologramManager(plugin));
 
 		// Requires 1.9+

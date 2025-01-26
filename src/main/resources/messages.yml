@@ -11,15 +11,6 @@ Messages:
     CONFIG_RELOAD: "%prefix% &aAll configuration files has been reloaded in &7%time%ms"
     COOLDOWN_ACTIVE: "%prefix% &cYou must wait &e%time%s &cbefore doing this again!"
 
-  GAMEMODE:
-    GAMEMODE_CHANGE: "%prefix% &7You have changed gamemode to &a%gamemode%"
-    GAMEMODE_CHANGE_OTHER: "%prefix% &7You have changed gamemode to &a%gamemode% &7for &e%player%"
-    GAMEMODE_INVALID: "%prefix% &e%gamemode% &cis not a valid gamemode"
-
-  VANISH:
-    ENABLE: "%prefix% &aYou have now vanished"
-    DISABLE: "%prefix% &cYou have now unvanished"
-
   FLIGHT:
     ENABLE: "%prefix% &aYou have enabled flight"
     DISABLE: "%prefix% &cYou have disabled flight"

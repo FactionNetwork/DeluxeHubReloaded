@@ -27,18 +27,6 @@ custom_commands:
 # It's highly recommended to restart your server if you edit anything below
 
 commands:
-  gamemode:
-    enabled: true
-    aliases:
-      - gm
-  gms:
-    enabled: true
-  gmc:
-    enabled: true
-  gma:
-    enabled: true
-  gmsp:
-    enabled: true
   clearchat:
     enabled: true
   fly:
@@ -51,10 +39,6 @@ commands:
     enabled: true
   lobby:
     enabled: true
-  vanish:
-    enabled: true
-    aliases:
-      - v
   buildmode:
     enabled: true
     aliases:

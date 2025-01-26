@@ -9,14 +9,11 @@ public enum Permissions {
 	COMMAND_OPEN_MENUS("command.openmenu"),
 	COMMAND_HOLOGRAMS("command.holograms"),
 
-	COMMAND_GAMEMODE("command.gamemode"),
-	COMMAND_GAMEMODE_OTHERS("command.gamemode.others"),
 	COMMAND_CLEARCHAT("command.clearchat"),
 	COMMAND_FLIGHT("command.fly"),
 	COMMAND_FLIGHT_OTHERS("command.fly.others"),
 	COMMAND_LOCKCHAT("command.lockchat"),
 	COMMAND_SET_LOBBY("command.setlobby"),
-	COMMAND_VANISH("command.vanish"),
 	COMMAND_BUILD_MODE("command.buildmode"),
 	COMMAND_BUILD_MODE_OTHERS("command.buildmode.others"),
 
