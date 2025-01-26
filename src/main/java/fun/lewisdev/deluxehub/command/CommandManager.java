@@ -7,7 +7,6 @@ import cl.bgmp.minecraft.util.commands.exceptions.CommandException;
 import cl.bgmp.minecraft.util.commands.injection.SimpleInjector;
 import fun.lewisdev.deluxehub.DeluxeHubPlugin;
 import fun.lewisdev.deluxehub.command.commands.*;
-import fun.lewisdev.deluxehub.command.commands.gamemode.*;
 import fun.lewisdev.deluxehub.config.ConfigType;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -74,21 +73,6 @@ public class CommandManager {
 
 	private void registerCommand(String cmd, String[] aliases) {
 		switch (cmd.toUpperCase()) {
-			case "GAMEMODE":
-				commandRegistry.register(GamemodeCommand.class, aliases);
-				break;
-			case "GMS":
-				commandRegistry.register(SurvivalCommand.class, aliases);
-				break;
-			case "GMC":
-				commandRegistry.register(CreativeCommand.class, aliases);
-				break;
-			case "GMA":
-				commandRegistry.register(AdventureCommand.class, aliases);
-				break;
-			case "GMSP":
-				commandRegistry.register(SpectatorCommand.class, aliases);
-				break;
 			case "CLEARCHAT":
 				commandRegistry.register(ClearchatCommand.class, aliases);
 				break;
@@ -103,9 +87,6 @@ public class CommandManager {
 				break;
 			case "LOBBY":
 				commandRegistry.register(LobbyCommand.class, aliases);
-				break;
-			case "VANISH":
-				commandRegistry.register(VanishCommand.class, aliases);
 				break;
 			case "BUILDMODE":
 				commandRegistry.register(BuildModeCommand.class, aliases);
