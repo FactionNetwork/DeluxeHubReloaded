@@ -3,10 +3,6 @@ package fun.lewisdev.deluxehub.base;
 import fun.lewisdev.deluxehub.DeluxeHubPlugin;
 import fun.lewisdev.deluxehub.config.ConfigType;
 import fun.lewisdev.deluxehub.config.Messages;
-import fun.lewisdev.deluxehub.module.ModuleType;
-import fun.lewisdev.deluxehub.module.modules.hotbar.HotbarManager;
-import fun.lewisdev.deluxehub.module.modules.player.PvPMode;
-import fun.lewisdev.deluxehub.module.modules.player.TeleportationBow;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.ComponentBuilder;
 import org.bukkit.GameMode;
@@ -90,7 +86,7 @@ public class BuildMode implements Listener {
 		if (player == null) return;
 		_players.remove(uuid);
 		player.getInventory().clear();
-		player.setGameMode(GameMode.SURVIVAL);
+		player.setGameMode(GameMode.ADVENTURE);
 		if (_inventories.containsKey(uuid)) {
 			player.getInventory().setContents(_inventories.get(uuid)); // Restore inventory
 			_inventories.remove(uuid);
