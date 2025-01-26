@@ -76,6 +76,34 @@ public class PlayerListener extends Module {
 				if (color != null) fireworkColors.add(color);
 			});
 		}
+
+		// Plugin reloads can occur.
+		if (getConfig(ConfigType.SETTINGS).getBoolean("player_hider.enabled")) {
+			for (Player player : Bukkit.getOnlinePlayers()) {
+				String viewPermission = getConfig(ConfigType.SETTINGS).getString("player_hider.view_permission");
+				boolean playerIsVIP = player.hasPermission(viewPermission);
+
+				for (Player online : Bukkit.getOnlinePlayers()) {
+					if (online.equals(player)) continue;
+
+					boolean onlineIsVIP = online.hasPermission(viewPermission);
+
+					if (playerIsVIP && onlineIsVIP) {
+						player.showPlayer(getPlugin(), online);
+						online.showPlayer(getPlugin(), player);
+					} else if (playerIsVIP) {
+						player.hidePlayer(getPlugin(), online);
+						online.showPlayer(getPlugin(), player);
+					} else if (onlineIsVIP) {
+						player.showPlayer(getPlugin(), online);
+						online.hidePlayer(getPlugin(), player);
+					} else {
+						player.hidePlayer(getPlugin(), online);
+						online.hidePlayer(getPlugin(), player);
+					}
+				}
+			}
+		}
 	}
 
 	@Override
