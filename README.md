@@ -2,6 +2,7 @@
   <img src="https://i.imgur.com/TmuOX8L.png" alt="Header">
   <p align="center">
     DeluxeHub is the all-in-one hub server solution compacting a large amount of hub essentials into one plugin.
+    This version was specifically made for Faction Network, it has some removed features such as vanish and some others added.
     <br />
     <br />
     <a href="https://strafbefehl.github.io/DeluxeHubReloadedDocs/welcome">Wiki</a>
