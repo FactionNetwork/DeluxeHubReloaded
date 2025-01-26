@@ -17,10 +17,6 @@ Messages:
     ENABLE_OTHER: "%prefix% &cYou have enabled flight for &7%player%"
     DISABLE_OTHER: "%prefix% &cYou have disabled flight for &7%player%"
 
-  PLAYER_HIDER:
-    HIDDEN: "%prefix% &cPlayer visibility disabled"
-    SHOWN: "%prefix% &aPlayer visibility enabled"
-
   LOBBY:
     SET_LOBBY: "%prefix% &aYou have successfully set the lobby spawn point"
 

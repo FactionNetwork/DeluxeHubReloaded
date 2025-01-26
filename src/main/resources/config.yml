@@ -385,27 +385,8 @@ custom_join_items:
 player_hider:
   # Should the player hider feature be enabled?
   enabled: true
-  # Slot the item should be given to?
-  slot: 8
-  # Should we prevent them from moving/dropping the item?
-  disable_inventory_movement: true
-  # Cooldown in seconds
-  # Set to 0 to disable
-  cooldown: 3
-
-  not_hidden:
-    material: LIME_DYE
-    amount: 1
-    display_name: '&dPlayers &8&l> &aShown &7(Right-Click)'
-    lore:
-      - '&7Click to hide all players!'
-
-  hidden:
-    material: GRAY_DYE
-    amount: 1
-    display_name: '&dPlayers &8&l> &cHidden &7(Right-Click)'
-    lore:
-      - '&7Click to show all players!'
+  # Which permissions will players require in order to be seen? Leave to 'none' if there won't be any visible players
+  view_permission: "deluxehub.hider.see"
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # | PVP MODE                                 |

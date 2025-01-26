@@ -109,6 +109,33 @@ public class PlayerListener extends Module {
 		// Clear the player inventory
 		if (clearInventory) player.getInventory().clear();
 
+		// Check if the player hider is enabled in the configuration
+		if (getConfig(ConfigType.SETTINGS).getBoolean("player_hider.enabled")) {
+
+			String viewPermission = getConfig(ConfigType.SETTINGS).getString("player_hider.view_permission");
+			boolean playerIsVIP = player.hasPermission(viewPermission);
+
+			for (Player online : Bukkit.getOnlinePlayers()) {
+				if (online.equals(player)) continue;
+
+				boolean onlineIsVIP = online.hasPermission(viewPermission);
+
+				if (playerIsVIP && onlineIsVIP) {
+					player.showPlayer(getPlugin(), online);
+					online.showPlayer(getPlugin(), player);
+				} else if (playerIsVIP) {
+					player.hidePlayer(getPlugin(), online);
+					online.showPlayer(getPlugin(), player);
+				} else if (onlineIsVIP) {
+					player.showPlayer(getPlugin(), online);
+					online.hidePlayer(getPlugin(), player);
+				} else {
+					player.hidePlayer(getPlugin(), online);
+					online.hidePlayer(getPlugin(), player);
+				}
+			}
+		}
+
 		Bukkit.getScheduler().scheduleSyncDelayedTask(getPlugin(), () -> {
 			// Join events
 			executeActions(player, joinActions);

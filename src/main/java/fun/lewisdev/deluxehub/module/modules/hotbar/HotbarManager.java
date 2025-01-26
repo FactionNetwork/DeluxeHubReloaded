@@ -6,13 +6,11 @@ import fun.lewisdev.deluxehub.config.ConfigType;
 import fun.lewisdev.deluxehub.module.Module;
 import fun.lewisdev.deluxehub.module.ModuleType;
 import fun.lewisdev.deluxehub.module.modules.hotbar.items.CustomItem;
-import fun.lewisdev.deluxehub.module.modules.hotbar.items.PlayerHider;
 import fun.lewisdev.deluxehub.utility.ItemStackBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
 
@@ -58,15 +56,6 @@ public class HotbarManager extends Module {
 				registerHotbarItem(customItem);
 			}
 
-		}
-
-		if (config.getBoolean("player_hider.enabled")) {
-			ItemStack item = ItemStackBuilder.getItemStack(config.getConfigurationSection("player_hider.not_hidden")).build();
-			PlayerHider playerHider = new PlayerHider(this, item, config.getInt("player_hider.slot"), "PLAYER_HIDER");
-
-			playerHider.setAllowMovement(config.getBoolean("player_hider.disable_inventory_movement"));
-
-			registerHotbarItem(playerHider);
 		}
 
 		giveItems();
