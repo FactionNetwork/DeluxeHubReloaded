@@ -6,7 +6,6 @@ import dev.strafbefehl.deluxehubreloaded.config.ConfigType;
 import dev.strafbefehl.deluxehubreloaded.module.Module;
 import dev.strafbefehl.deluxehubreloaded.module.ModuleType;
 import dev.strafbefehl.deluxehubreloaded.module.modules.hotbar.items.CustomItem;
-import dev.strafbefehl.deluxehubreloaded.module.modules.hotbar.items.PlayerHider;
 import dev.strafbefehl.deluxehubreloaded.utility.ItemStackBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
