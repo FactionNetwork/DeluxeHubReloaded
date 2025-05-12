@@ -1,11 +1,11 @@
 ### Mac ###
 .DS_Store
 
-### Maven ###
+### Gradle ###
 
-target/
-dependency-reduced-pom.xml
-pom.xml.versionsBackup
+build/
+.gradle
+gradle
 
 ### Intellij ###
 .idea/

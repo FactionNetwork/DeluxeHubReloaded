@@ -6,12 +6,12 @@
 # :|____/ \___|_|\__,_/_/\_\___|_| |_|\__,_|_.__/|_| \_\___|_|\___/ \__,_|\__,_|\___|\__,_|:
 # ··························································································
 # AUTHOR: Strafbefehl & Lewis D (ItsLewizzz)
-# WIKI: https://wiki.lewisdev.fun/free-resources/deluxehub
+# WIKI: https://strafbefehl.github.io/DeluxeHubReloadedDocs/welcome
 # Copyright (c) Lewis D 2017-2022. All rights reserved.
 # Support: https://discord.gg/uQkg8ZeHzK
 #--------
 # CUSTOM MENUS
-#   You can add more menus to the "DeluxeHub/menus" directory,
+#   You can add more menus to the "DeluxeHubReloaded/menus" directory,
 #   copy and paste the default, server selector, menu and edit the file.
 #   Use the name of the file as the action ID.
 #--------
@@ -35,7 +35,7 @@
 # [COMMAND] - Execute a command as the player
 # [CONSOLE] - Execute a command as console
 # [GAMEMODE] - Change a players' gamemode
-# [BUNGEE] - Send a player to a server
+# [PROXY] - Send a player to a server
 # [EFFECT] e.g. EFFECT;LEVEL - Give a potion effect
 # [MENU] - Open a menu from (plugins/DeluxeHub/menus)
 # [CLOSE] - Close an open inventory gui
@@ -50,6 +50,10 @@
 
 # Check for latest GitHub updates (recommended).
 check-updates: true
+version: 3.7.0
+
+# If you use multiple worlds set this to true
+multiple_worlds: false
 
 # Disable specific worlds
 disabled-worlds:
@@ -70,13 +74,12 @@ build_mode:
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # | STATIC TIME                              |
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
 static_time:
   # Should StaticTime be enabled?
   enabled: false
-
   # Which time should be set permanently in hub worlds?
   time: 12000
-
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # | ANTI-WORLD DOWNLOADER                    | 
@@ -86,10 +89,8 @@ static_time:
 anti_wdl:
   # Should AntiWDL be enabled?
   enabled: true
-
   # Should players with 'deluxehub.antiwdl.alert' will be notified?
   notify_admins: true
-
   # There is no need to kick the player if he is running WDL as our system hooks into the mod to prevent a world download
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
@@ -99,27 +100,27 @@ anti_wdl:
 scoreboard:
   # Should the scoreboard feature be enabled?
   enabled: true
-
   # Should we delay showing the scoreboard?
   # Value in ticks (20 ticks = 1 second), 0 to disable
   display_delay:
     server_enter: 60 # 3 seconds
     world_change: 40 # 2 seconds
-
   # Should we refresh the scoreboard (update placeholders)?
   refresh:
     enabled: true
     rate: 200 # In ticks (20 ticks = 1 second)
-
-  title: "&d&lDeluxeHubReloaded 3 &7(%online%/%online_max%)"
+  title: "{#9863E7}DeluxeHubReloaded{/#545eb6}"
   lines:
-    - "&7&m----------------------"
-    - "&e&lPlayer:"
-    - "  &f%player%"
+    - "&7&m----------------------------"
+    - "{#8546E5}Player:{/#C5CBFF}"
+    - "  {#C19EF6}%player%"
     - ""
-    - "&e&lRank:"
-    - "  &f%vault_rank%"
-    - "&7&m----------------------"
+    - "{#8546E5}Support:{/#C5CBFF}"
+    - "  {#C19EF6}https://discord.gg/uQkg8ZeHzK"
+    - ""
+    - "{#8546E5}Rate us!{/#C5CBFF}"
+    - "  {#C19EF6}SpigotMC"
+    - "&7&m----------------------------"
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # |TABLIST                                   |
@@ -137,7 +138,7 @@ tablist:
   # Modify the header of the tablist
   header:
     - ""
-    - "&d&lDeluxeHubReloaded &7(%online%/%online_max%)"
+    - "{#9863E7}DeluxeHubReloaded{/#545eb6} &7(%online%/%online_max%)"
     - ""
 
   # Modify the footer of the tablist
@@ -192,15 +193,12 @@ announcements:
 launchpad:
   # Should the launchpad feature be enabled ?
   enabled: true
-
   # Launch power for launchpad (max 4.0)
   launch_power: 3.0
   launch_power_y: 1.0
-
   # Top and bottom block required to make a launchpad
   top_block: STONE_PRESSURE_PLATE
   bottom_block: REDSTONE_BLOCK
-
   # Actions executed upon use of a launchpad
   actions:
     - '[SOUND] entity.bat.takeoff'
@@ -212,14 +210,11 @@ launchpad:
 double_jump:
   # Should the double jump feature be enabled?
   enabled: true
-
   # Launch power for double jump (max 4.0)
   launch_power: 1.0
   launch_power_y: 0.9
-
   # Cooldown time in seconds (0 to disable)
   cooldown: 3
-
   # Actions executed upon use of double jump
   actions:
     - '[SOUND] entity.bat.takeoff'
@@ -230,7 +225,6 @@ double_jump:
 command_block:
   # Should the command blocker feature be enabled?
   enabled: true
-
   # List of commands that will be blocked
   blocked_commands:
     - /pl
@@ -248,7 +242,6 @@ command_block:
 anti_swear:
   # Should the anti-swear feature be enabled?
   enabled: true
-
   # List of words that will be blocked
   blocked_words:
     - fuck
@@ -260,7 +253,6 @@ anti_swear:
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 world_settings:
-
   # Player
   disable_hunger_loss: true
   disable_fall_damage: true
@@ -269,16 +261,13 @@ world_settings:
   disable_fire_damage: true
   disable_drowning: true
   disable_off_hand_swap: true # Requires 1.9+
-
   # Misc
   disable_weather_change: true
   disable_death_message: true
   disable_mob_spawning: true
-
   # Item entities
   disable_item_drop: true
   disable_item_pickup: true
-
   # Blocks
   disable_block_break: true
   disable_block_place: true
@@ -309,7 +298,7 @@ join_events:
   - "[MESSAGE] &r  &3&lSTORE &fstore.examplemc.net"
   - "[MESSAGE] &r  &9&lDISCORD &fdiscord.examplemc.net"
   - "[MESSAGE] &r"
-  - "[MESSAGE] &r            &7&oPowered By DeluxeHubReloaded"
+  - "[MESSAGE] &r            &7&oPowered By {#9863E7}DeluxeHubReloaded{/#545eb6}"
   - "[MESSAGE] &8&m+---------------***---------------+"
   - "[TITLE] &b&lWELCOME;&f%player%;1;2;1"
   - "[SOUND] entity.player.levelup"
@@ -372,7 +361,7 @@ custom_join_items:
       material: NETHER_STAR
       amount: 1
       slot: 4
-      display_name: "&eServer Selector"
+      display_name: "{#9863E7}Server Selector{/#545eb6}"
       lore:
         - "&7Right-click to open the server selector!"
       actions:
@@ -466,3 +455,13 @@ teleportation_bow:
     display_name: '&dTeleportation Arrow'
     lore:
       - '&dWhat a beautiful arrow!'
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# | LEGACY SYSTEMS                           |
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+legacySystems:
+  # Should we use the new lobby permission system?
+  # If this is disabled build, destroy, interact, pvp, pickup and drop will be only possible in the build mode instead all the time as a admin
+  # If this is enabled, the old system will be used (permission based https://strafbefehl.github.io/DeluxeHubReloadedDocs/goodtoknow/worldprotection)
+  permissionsEnabled: false

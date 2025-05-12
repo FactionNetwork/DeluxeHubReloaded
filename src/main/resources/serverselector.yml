@@ -29,7 +29,8 @@
 #       - HIDE_UNBREAKABLE
 #
 # ITEM ACTIONS
-#   All item actions can be found here https://wiki.lewisdev.fun/free-resources/deluxehub/action-types
+#   All item actions can be found here https://strafbefehl.github.io/DeluxeHubReloadedDocs/goodtoknow/actions
+version: 3.7.0
 
 # Slots of the GUI
 slots: 27
